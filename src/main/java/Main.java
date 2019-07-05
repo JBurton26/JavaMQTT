@@ -24,7 +24,7 @@ public class Main {
         //}
         //JSONObject json2 = new JSONObject();
         //json2.put("Values",jsonArray);
-        
+
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("nodeid",numVals.nextInt(5)+1);
         jsonObject.put("temperature", numVals.nextInt(30));
