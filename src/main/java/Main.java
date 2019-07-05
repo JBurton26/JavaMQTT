@@ -14,16 +14,7 @@ public class Main {
         while (intVals < 5){
             intVals = numVals.nextInt(10);
         }
-        //JSONArray jsonArray = new JSONArray();
-        //for (int i = 0; i < intVals; i++){    //TODO Fix this code to add multiple values at once
-        //    JSONObject jsonObject = new JSONObject();
-        //    jsonObject.put("nodeid",numVals.nextInt(5));
-        //    jsonObject.put("temperature", numVals.nextInt(30));
-        //    jsonObject.put("humidity", numVals.nextInt(100));
-        //    jsonArray.add(jsonObject);
-        //}
-        //JSONObject json2 = new JSONObject();
-        //json2.put("Values",jsonArray);
+
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("nodeid",numVals.nextInt(5)+1);
