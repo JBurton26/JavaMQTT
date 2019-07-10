@@ -14,8 +14,6 @@ public class Main {
         while (intVals < 5){
             intVals = numVals.nextInt(10);
         }
-
-
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("nodeid",numVals.nextInt(5)+1);
         jsonObject.put("temperature", numVals.nextInt(30));
@@ -36,5 +34,4 @@ public class Main {
             e.printStackTrace();
         }
     }
-
 }
