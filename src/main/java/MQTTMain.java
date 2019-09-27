@@ -4,19 +4,38 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.*;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
-//Main Class for
-public class Main {
-    public static void main(String[] args){
+//MQTTMain Class for
+public class MQTTMain {
+    private JButton Add;
+    private JPanel panel1;
 
-        Random numVals = new Random();
-        int intVals = numVals.nextInt(10);
-        intVals += 1;
-        while (intVals < 5){
-            intVals = numVals.nextInt(10);
-        }
-        messages(intVals);
+    public MQTTMain() {
+        Add.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Random numVals = new Random();
+                int intVals = numVals.nextInt(10);
+                intVals += 1;
+                while (intVals < 5){
+                    intVals = numVals.nextInt(10);
+                }
+                messages(intVals);
+            }
+        });
     }
+
+    public static void main(String[] args){
+        JFrame frame = new JFrame("MQTTMain");
+        frame.setContentPane(new MQTTMain().panel1);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+
+    }
+
     private static void messages(int num){
         MqttClient client;
         Random numVals = new Random();
@@ -48,4 +67,5 @@ public class Main {
         }
 
     }
+
 }
